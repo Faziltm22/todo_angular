@@ -62,7 +62,7 @@ def UserLog(request):
         password = user_data.get('Password')
         # tusr=User.objects.all()
 
-        user = User.objects.filter(Username=username).first()
+        user = User.objects.filter(Username=username,Password=password).first()
         idd=user.id
 
         if user:
